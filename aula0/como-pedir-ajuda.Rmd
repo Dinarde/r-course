@@ -1,0 +1,21 @@
+---
+title: "como-pedir-ajuda"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+```{r}
+?log
+help(mean)
+
+mean(c(1, 2, pi))
+
+quantile
+
+?xtabs
+```
+
+###Google
+
+### Stack Overflow
