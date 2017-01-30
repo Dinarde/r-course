@@ -1,0 +1,88 @@
+---
+title: "objetos"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+
+### Vetores
+Vetores possuem elementos de apenas uma e apenas uma classe.
+
+```{r, eval=FALSE}
+vetor1 <- c(1, 2, 3, 4)
+vetor2 <- c(0, 10)
+vetor_palavras <- c(10, "1000", "USP")
+class(vetor_palavras)
+```
+**DOMINATE** 'character > complex > numeric > integer > logical **RECESSIVO**
+(Faz o cast para o dominante)
+
+
+```{r}
+y <- c(1.7, "a") ##character
+y <- c(TRUE, 2) ## numeric
+y <- c(TRUE, "a") ## character
+y <- c(TRUE, FALSE, 10)
+
+length(y)
+y[1]
+y[4]
+y[c(1,3,1,1)]
+y[c(FALSE, TRUE, TRUE)]
+
+y[y %% 2 != 0]
+
+```
+### Matrizes
+Vetores aceitam elementos de apenas uma e apenas uma classe.
+```{r}
+m <- matrix(1:6, nrow = 2, ncol = 3)
+m
+dim(m)
+```
+
+```{r, eval=FALSE}
+m[2, ] #seleciona linha
+m[ ,3] #seleciona coluna
+m[1,2] 
+t(m)
+
+n <- t(m)
+m %% n
+solve(m %% n)
+
+```
+
+### Funções
+
+```{r}
+round(5.634)
+```
+
+```{r}
+dado <- 1:6
+round(mean(dado))
+```
+```{r}
+soma <- function(x, y = 0){
+  resposta <- x + y
+  return(resposta)
+}
+```
+
+```{r}
+soma(1,2)
+
+soma(1)
+soma(,2)
+soma(1,)
+```
+```{r}
+somatorio <- function(x, ...){
+  sum
+  return(resposta)
+}
+```
+
+

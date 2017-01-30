@@ -1,0 +1,82 @@
+---
+title: "controles-fluxo"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+## Controles de Fluxo
+  - if, else
+  - for
+  - while
+  
+### if else
+
+```{r}
+x <- 2
+x = 8
+
+if (x == 1){
+  print("oi")
+} else if (x == 2) {
+  print("tchau")
+} else if(x != 9){
+  print("alo alo")
+}else {
+  print("ufa")
+}
+  
+```
+
+
+```{r}
+
+vetor <- c(1, 2, 3)
+
+if (vetor == 1){
+  print("oi")
+} else if (x == 2) {
+  print("tchau")
+} else if(x != 9){
+  print("alo alo")
+}else {
+  print("ufa")
+}
+  
+```
+
+### For
+```{r}
+for(contador in 1:5){
+  print(contador)
+}
+```
+
+```{r}
+for(contador in 1:5){
+  resultado <- contador^3
+  print(resultado)
+}
+```
+```{r}
+vetor <- 30:35
+vetor2 <- 40:45
+indices <- seq_along(vetor)
+for(i in indices){
+  print( vetor[1:i] + vetor2[1:i] )
+}
+```
+
+```{r}
+jogadas <-0
+coroa <- FALSE
+
+while(!coroa){
+  coroa <- runif(1) > 0.5
+  jogadas <- jogadas + 1
+  
+}
+
+jogadas
+
+```

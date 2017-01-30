@@ -1,0 +1,25 @@
+---
+title: "instalar-pacotes"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+###Via R
+```{r, eval = FALSE}
+install.packages("magrittr")
+
+library(magrittr)
+
+
+```
+
+###Via GitHub
+
+```{r, eval=FALSE}
+if (!require("devtools"))
+  install.packages("devtools")
+devtools::install_github("rstudio/shiny")
+```
+
+
