@@ -1,0 +1,25 @@
+---
+title: "R Como Calculadora"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+#R como Calculadora
+
+##Operadores aritméticos
+```{r}
+(2 - 1/pi) * 4
+2 - 1/pi *4
+```
+
+##Operadores Lógicos
+```{r}
+1 < 2
+2 <= 1
+2 > 1
+1 >= 1
+
+!1 < 2
+```
+

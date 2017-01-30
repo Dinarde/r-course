@@ -1,0 +1,30 @@
+---
+title: "Relatório para o diretor"
+author: '@dinarde'
+date: "30 de janeiro de 2017"
+output: html_document
+---
+
+# Título Nível 1
+## Título Nível 2
+
+Olá Mundo,
+Aqui vai uma lista:
+
+ - A
+ - B
+ - J
+ 
+```{r}
+#Cálculo
+ x <- 2 +2
+ 5 * x
+```
+
+```{r}
+#Gráfico
+plot(1:10)
+```
+
+
+
