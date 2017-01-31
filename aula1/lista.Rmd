@@ -1,0 +1,101 @@
+---
+title: "lista"
+author: '@dinarde'
+date: "1 de fevereiro de 2017"
+output: html_document
+---
+
+```{r}
+pedido <- list(pedido_id = 8001406,
+               pedido_registro = as.Date("2016-12-12"),
+               nome = "Athos", 
+               sobrenome = "Petri Damiani", 
+               cpf = "12345678900", 
+               email = "athos.damiani@gmail.com", 
+               qualidades = c("incrível", "impressionante"),
+               itens = list(
+                 list(descricao = "Ferrari", 
+                      frete = 0, 
+                      valor = 500000),
+                 list(descricao = "Dolly", 
+                      frete = 1.5, 
+                      valor = 3.90)
+               ), 
+               endereco = list(entrega = list(logradouro = "Rua da Glória", 
+                                              numero = "123",
+                                              complemento = "apto 71"),
+                               cobranca = list(logradouro = "Rua Jose de Oliveira Coutinho",
+                                               numero = "151",
+                                               complemento = "5o andar")
+               )
+)
+
+```
+
+```{r}
+
+install.packages("tibble")
+library(tibble)
+
+install.packages("devtools")
+devtools::install_github('curso-r/pu.deps')
+
+
+
+
+```
+
+###Data Frame
+```{r}
+
+df_idade <- data.frame(nome = c("João", "Marcos", "Pedro", "José"), idades = c(10, 15, 12, 17))
+
+help(c)
+
+```
+
+
+a) selecione os elementos de indice impar de v1 usando vetor de inteiros
+b)  selecione os elementos de indice par de v1 usando vetor de boolean
+c) Selecione os três ultimos indices de v1 usando um vetor de inteiros
+d) Ordene as entradas de v1 de trás para frente usando um vetor de strings
+O vetor resultante deve ser
+```{r}
+v1 <- c(a = 1, b = 2, c= 3, d = 4, e = 5, f = 6, g = 7)
+
+#a)
+v1[c(1,3,5,7)]
+v1[seq(1,7,2)]
+v1[]
+v1[1:7 %% 2 == 1]
+
+
+```
+
+# Listas
+
+```{r}
+listas <- c(a = 1,b =  2,c = 3)
+
+listas[1]
+
+listas[[1]]
+
+listas$a
+```
+
+# Atribuição
+
+```{r}
+df_idade[df_idade$id == 2,1] = 10
+
+
+lista <- list(a = 1, b=2, c=3)
+lista$b = "bê"
+lista$b
+
+
+
+
+```
+
