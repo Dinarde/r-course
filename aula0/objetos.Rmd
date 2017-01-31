@@ -75,7 +75,6 @@ soma <- function(x, y = 0){
 soma(1,2)
 
 soma(1)
-soma(,2)
 soma(1,)
 ```
 ```{r}
