@@ -1,0 +1,101 @@
+---
+title: "aula_strings"
+author: '@dinarde'
+date: "1 de fevereiro de 2017"
+output: html_document
+---
+
+## Parte do código que importa os dados
+```{r}
+#carrega o pacote de leitura de xlsx
+library(readxl)
+
+comentarios <- read_excel(path = "comentarios.xlsx")
+
+View(comentarios)
+
+legendas_pt_1 <- read.csv(file = "legendas_pt_1.csv", stringsAsFactors = F)
+legendas_pt_2 <- read.csv2(file = "legendas_pt_2.csv",stringsAsFactors = F)
+
+View(legendas_pt_1)
+
+View(legendas_pt_2)
+
+
+legendas <- rbind(legendas_pt_1, legendas_pt_2)
+
+View(legendas)
+
+
+```
+
+## Stringr: Trabalhando com textos
+```{r}
+library(stringr)
+
+str_
+
+
+```
+
+## Funções básicas
+```{r}
+comentarios$autor[1:10]
+
+str_length(comentarios$autor[1:10])
+
+str_length(comentarios$texto[1:10])
+
+```
+é diferente de length
+
+```{r}
+length(("oi, blz?"))
+str_length(("oi, blz?"))
+
+
+```
+str trim
+
+```{r}
+s <-comentarios$texto[79]
+
+s
+
+
+str_trim(s)
+
+
+comentarios$texto[1:3]
+str_sub(comentarios$texto[1:3], start = 2, end = 5)
+
+
+```
+
+caixa alta e baixa
+
+```{r}
+str_to_upper(s)
+str_to_lower(s)
+```
+
+## REGEX Simples
+
+```{r}
+stringr::str_view(c("banana", "bolota", "beloto"),"a")
+
+stringr::str_view(comentarios$texto)
+
+
+stringr::str_view(comentarios$texto, "careca|clarice", match = TRUE)
+
+
+```
+## EXERCICIO
+
+ - Produza um str_view com sequencias de "k"s com PELO menos dois k
+
+```{r}
+str_view(comentarios$texto, "k{2}", match = TRUE)
+```
+
