@@ -93,6 +93,7 @@ stringr::str_view(comentarios$texto, "careca|clarice", match = TRUE)
 ```
 ## EXERCICIO
 
+<<<<<<< HEAD
  - Produza um str_view com sequencias de "K"s com PELO menos dois k
 
 ```{r}
@@ -117,5 +118,11 @@ str_detect(comentarios$texto[1:10],"careca")
 str_detect(comentarios$texto[1:10],"\\?")
 str_detect(comentarios$texto[1:10],"[careca]?]")
 
+=======
+ - Produza um str_view com sequencias de "k"s com PELO menos dois k
+
+```{r}
+str_view(comentarios$texto, "k{2}", match = TRUE)
+>>>>>>> 6ba11ccbed967b2556469bdc5b1f941fcd96481f
 ```
 
